@@ -1,6 +1,7 @@
-// function takeANumber(katzDeliLine, name){
-//   return `Welcome, ${name}. You are number ${katzDeliLine.length + 1} in line.`;
-// }
+function takeANumber(currentLine, name) {
+  currentLine.push(name);
+  return `"Welcome, ${name}. You are number ${currentLine.length} in line."`
+}
 
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
@@ -10,3 +11,5 @@ function nowServing(katzDeliLine) {
   return firstPerson;
   }
 }
+
+function currentLine(katzDeliLine)
