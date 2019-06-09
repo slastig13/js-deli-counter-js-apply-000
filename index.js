@@ -8,12 +8,12 @@ function nowServing(katzDeliLine) {
     return "There is nobody waiting to be served!";
   } else {
   let firstPerson = katzDeliLine.shift();
-  return firstPerson;
+  return `Currently serving ${firstPerson}.`;
   }
 }
 
 function currentLine(katzDeliLine) {
-let string = "The line is currently:"
+let string = "The line is currently: "
 let newLine = [];
 
   if (katzDeliLine.length === 0) {
@@ -25,6 +25,6 @@ let newLine = [];
       person = `${i + 1}. ${person}`;
       newLine.push(person);
     }
-    return string + String(newLine)
+    return string + String(newLine.join(', '));
   }
 }
